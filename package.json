@@ -1,0 +1,41 @@
+{
+  "name": "bun-router",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rimraf -rf dist && tsc"
+  },
+  "lint-staged": {
+    "packages/*/{src, types}/**/*.{js,json,ts}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PengBoUESTC/bun-router.git"
+  },
+  "keywords": [],
+  "author": "pengboUESTC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PengBoUESTC/bun-router/issues"
+  },
+  "homepage": "https://github.com/PengBoUESTC/bun-router#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "bun-types": "^0.1.3",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "tslint": "^6.1.3",
+    "typescript": "^4.7.4",
+    "yorkie": "^2.0.0"
+  },
+  "dependencies": {}
+}
